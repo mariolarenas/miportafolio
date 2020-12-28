@@ -1,0 +1,102 @@
+/*:root representa el elemento <html> y es idéntico al selector html*/
+:root {
+  --micolordesecciones: #009625; /* color de de las 3 secciones nav,experiencia,footer*/
+  --micolordeletra: #050505f6; /*Color de texto de que queramos en este caso parrafos, mi experiencia, etc*/
+  --bordenav: #9f9fa100; /*Color del borde de los botones de navegación*/
+}
+/*Aplico el tipo de letra Ruda al texto que seleccione y además añado mi color de letra que estipule para el html*/
+body {
+  font-family: "Ruda", sans-serif;
+  color: var(--micolordeletra);
+}
+/*Color de fondo para las diferentes secciones*/
+.nav__color,
+.section__trabajos,
+.section__footer {
+  background-color: var(--micolordesecciones) !important;
+}
+/*Tamaño de la letra del titulo en este caso la letra M de Mario*/
+.nav__titulo {
+  font-size: 35pt;
+}
+/*Colocamos borde y color de borde para los nav*/
+.nav__button {
+  border: 1px solid var(--bordenav) !important;
+}
+/*Tipo de fuente para el menu nav*/
+.nav_menu_collapse {
+  font-family: Ruda, sans-serif;
+}
+
+/*Aca asigno la imagen principal y le añado ciertos limites*/
+.header_section_img {
+  background-image: url("../img/principal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  /*1vh = 1% de la altura del viewport
+
+    100vh = altura del viewport
+
+    1vw = 1% del ancho del viewport
+
+    100vw = ancho del viewport*/
+}
+/*asignamos un ancho y alto de las linea que se creo para el cambio de tema entre párrafos __________________*/
+.header__line {
+  width: 300px;
+  height: 1pt;
+}
+/*aca dejamos el texo yo soy casi al final de la imagene principal con el padding-top*/
+.header__div {
+  padding-top: 550px;
+}
+
+section:nth-of-type(1) div:first-child hr {
+  height: 1pt;
+  width: 100px;
+}
+/*
+section:nth-of-type(1) div:last-child {
+  font-family: "Open Sans", sans-serif;
+  line-height: 3;
+}*/
+
+.section__experiencia div hr {
+  width: 125px;
+  height: 1pt;
+}
+/*traspasamos el color que definimos anteriormente a --micolordesecciones para que los iconos tengan el mismo color que mis secciones*/
+.section_icon_color {
+  color: var(--micolordesecciones);
+}
+
+.section__experiencia__barra {
+  height: 2pt;
+  width: 130px;
+}
+
+.section__experiencia__barra div {
+  width: 100%;
+}
+
+.section__trabajos div hr {
+  width: 110px;
+  height: 1pt;
+}
+/*Podemos añadir otro tipo de letra y asignarla a la sección de texto que queramos*/
+.section_text_ruda {
+  font-family: "Ruda", sans-serif;
+}
+/*Añadimos mas configuraciones para el text de las tarjetas*/
+.card-text {
+  display: -webkit-box;
+  display: box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  overflow-y: hidden;
+}
